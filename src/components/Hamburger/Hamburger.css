@@ -1,0 +1,31 @@
+:root{
+    --hamburgerHeight : 28px;
+    --hamburgerWidth : 28px;
+    --hamburger-color : #9b9d9e;
+}
+
+.hamburger-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: var(--hamburgerWidth);
+    height: var(--hamburgerHeight);
+}
+.hamburger-icon>span{
+    background-color: var(--hamburger-color);
+    height : 2px;
+    width : 80%;
+    border-radius: 10px;
+    transition: all 200ms ease-in-out;
+}
+
+.hamburger-open .strokes:nth-of-type(1){
+    transform: translateY(calc(1px +var(--hamburgerWidth)/4 )) rotate(-45deg);
+}
+.hamburger-open .strokes:nth-of-type(2){
+    background: transparent;
+}
+.hamburger-open .strokes:nth-of-type(3){
+    transform: translateY(calc((-1*(var(--hamburgerWidth)/4)+1px))) rotate(45deg);
+}

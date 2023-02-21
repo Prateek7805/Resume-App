@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
-}
+:root{
+  --sc-width : 10px;
+  --sc-track-color : #444654;
+  --sc-track-hover-color : #797a85;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  --resume-r-pd : 10px; 
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  --resume-logo-color : #9b9d9e; 
 }
-
-.App-header {
-  background-color: #282c34;
+.wrapper{
+  position: relative;
+  min-width: 100vw;
   min-height: 100vh;
+  overflow: hidden;
+  padding: 0;
+}
+
+.resume-body{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: scroll;
+  padding-left: var(--resume-r-pd) !important;
+  padding-right: calc(var(--resume-r-pd) + var(--sc-width) + 2px) !important;
+
+}
+
+.resume-body::-webkit-scrollbar {
+  width: var(--sc-width);
+  display: none;
+
+}
+.resume-body:hover::-webkit-scrollbar{
+  display: block;
+}
+.resume-body:hover{
+  padding-right: calc(var(--resume-r-pd) + 2px) !important;
+}
+/* Track */
+.resume-body::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.resume-body::-webkit-scrollbar-thumb {
+  background-color: var(--sc-track-color);
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Handle on hover */
+.resume-body::-webkit-scrollbar-thumb:hover {
+  background: var(--sc-track-hover-color); 
+  transform: scale(1.2);
+}
+
+.nav-logo{
+  width: 32px;
+  height: 32px;
+  fill : #fff;
+}
+
+.card-row{
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px;
+  /* outline: #444654 solid 1px; */
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list-group{
+  list-style: disc outside;
 }
