@@ -145,8 +145,8 @@ const allData = [{
     href: "languages",
     content: [
         {
-            language: "",
-            proficiency: ""
+            language: "English",
+            proficiency: 5
         }
     ]
 },
@@ -156,7 +156,7 @@ const allData = [{
     content: [
         "PCB Design",
         "Making electronic circuits",
-        "LED ART"
+        "Swimming"
     ]
 }
 ];

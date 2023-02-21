@@ -3,7 +3,7 @@ import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
 import Navbaar, { stCapitalize } from './components/Navbar';
-import { Container, Row, Col, Card, ListGroup } from 'react-bootstrap';
+import { Container, Row, Col, Card, ListGroup, Badge } from 'react-bootstrap';
 import { useState } from 'react';
 import allData from './components/data';
 function App() {
@@ -207,14 +207,34 @@ function App() {
                   <Card.Title style={{ fontSize: '16px' }}> {stCapitalize(allData[6].title)}</Card.Title>
                   <Card.Text style={{ fontSize: '12px' }}>
                   <hr/>    
+                  <ul>
                     {
                       allData[6].content.map((item, key) => {
                         return (
-                          <div style={{padding: "10px"}} key={key}>{item.title}</div>
+                          <li style={{padding: "10px"}} key={key}>{item.title}</li>
                         )
                       })
                     }
-                    
+                  </ul>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Row>
+            <Row className="card-row" id={allData[7].href}>
+              <Card>
+                <Card.Body>
+                  <Card.Title style={{ fontSize: '16px' }}> {stCapitalize(allData[7].title)}</Card.Title>
+                  <Card.Text style={{ fontSize: '12px' }}>
+                  <hr/>    
+                  <ul>
+                    {
+                      allData[7].content.map((item, key) => {
+                        return (
+                          <li style={{padding: "10px"}} key={key}><Badge>{item.language}</Badge></li>
+                        )
+                      })
+                    }
+                  </ul>
                   </Card.Text>
                 </Card.Body>
               </Card>
