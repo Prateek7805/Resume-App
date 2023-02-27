@@ -64,7 +64,7 @@ function App() {
     }
 
     getData();
-  }, []);
+  }, [id]);
 
   switch (loading) {
     case 'yes': return (

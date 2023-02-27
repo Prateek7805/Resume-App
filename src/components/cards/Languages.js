@@ -1,4 +1,4 @@
-import {Card, Badge} from 'react-bootstrap';
+import {Card} from 'react-bootstrap';
 import { stCapitalize } from '../helperFns';
 
 export default function Languages({data}){
