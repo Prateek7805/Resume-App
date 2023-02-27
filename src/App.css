@@ -7,6 +7,7 @@
 
   --resume-logo-color : #9b9d9e; 
 }
+
 .wrapper{
   position: relative;
   min-width: 100vw;
@@ -35,7 +36,7 @@
   display: block;
 }
 .resume-body:hover{
-  padding-right: calc(var(--resume-r-pd) + 2px) !important;
+  padding-right: calc(var(--resume-r-pd) + 2px) !important; /* sc-width + 2px border*/
 }
 /* Track */
 .resume-body::-webkit-scrollbar-track {
@@ -66,9 +67,30 @@
   justify-content: space-evenly;
   align-items: center;
   padding: 10px;
-  /* outline: #444654 solid 1px; */
 }
 
 .list-group{
   list-style: disc outside;
+}
+
+.resume-col-left>div{
+  margin-top: 10px;
+}
+.resume-col-right>div{
+  margin-top: 10px;
+}
+
+
+.panel-data{
+  display: flex;
+  flex-direction: column;
+}
+.panel-image{
+  width: 160px;
+  height: 160px;
+}
+.panel-image>img{
+  height: 100%;
+  width: auto;
+  aspect-ratio: 1 / 1;
 }
